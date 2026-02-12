@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halfway image</title>
+    <style>
+        body {
+            margin: 0;
+            height: 200vh; /* Make the body height twice the viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        .textoverlay {
+            background: rgb(214, 115, 115, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .background-image {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 75%;
+            height: 75%;
+            background-image: url('img1.jpeg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+            opacity: 0.5; /* Optional: make the image semi-transparent */
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="textoverlay">
+        <h1>Scroll down to see the image stay centered</h1>
+        </div>
+    </div>
+    <div class="background-image"></div>
+</body>
+</html>
